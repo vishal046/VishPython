@@ -1,0 +1,67 @@
+# Problem Name is &&& Group Anagrams &&& PLEASE DO NOT REMOVE THIS LINE.
+
+
+"""
+Instructions to candidate.
+  1) Given a list of words, group them by anagrams
+     Input: ['cat', 'dog', 'god']
+     Output: [{'cat'}, {'dog', 'god'}]
+  2) Run this code in the REPL to observe its behaviour. The
+   execution entry point is main().
+  3) Consider adding some additional tests in doTestsPass().
+  4) If time permits, some possible follow-ups.
+"""
+
+
+"""
+Returns a list of sets of anagrams
+
+Args:
+    words - list of words to process
+
+Example:
+    Input: ['cat', 'dog', 'god']
+    Output: [{'cat'}, {'dog': 'god'}]
+"""
+        
+        
+def group(words):
+    # TODO: implement!
+    
+    d1={}
+    for i in range(len(words)): 
+        if set(words[i].sort()) in d1: 
+            pass
+        else: 
+            d1[word[i]]=''
+        
+        
+        
+    return ()
+
+
+""" Returns True if all tests pass. Otherwise returns False. """
+def doTestsPass():
+    # TODO: add more test cases
+    words = ['cat', 'dog', 'cat', 'god']
+    anagram_sets = [{'cat'}, {'dog', 'god'}]
+
+    result = group(words)
+    print("Result: {}".format(result))
+
+    allTestsPass = True
+    for anagram_set in anagram_sets:
+        if anagram_set not in result:
+            allTestsPass = False
+            print("Test Failed! Result missing anagram set: {}".format(anagram_set))
+
+    if( allTestsPass ):
+        print( "All tests pass." )
+    else:
+        print( "There are test failures." )
+
+    return( allTestsPass )
+
+
+if __name__ == "__main__":
+    doTestsPass()
